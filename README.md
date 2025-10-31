@@ -1,20 +1,16 @@
-# Pothole Detection with YOLO
+# Pothole Detection with YOLOv8n
 
-A deep learning project for detecting potholes in images and videos using YOLOv8/YOLO11 object detection model.
+A pothole detection project using YOLOv8n (nano version) for object detection in images and videos.
 
-## 📋 Project Overview
+## Demo
 
-This project uses the YOLO (You Only Look Once) framework to detect potholes in road images and videos. The model is trained on a custom pothole dataset and can be used for real-time pothole detection in traffic management systems.
+https://github.com/user-attachments/assets/predicted_sample_video.mp4
 
-## 🚀 Features
+## Project Overview
 
-- Download and prepare pothole detection dataset from Kaggle
-- Train YOLOv8/YOLO11 model on pothole dataset
-- Real-time pothole detection in videos
-- Bounding box visualization with confidence scores
-- Easy-to-use Python scripts
+This project trains a YOLOv8n model to detect potholes in road videos. The model is trained on a pothole dataset from Kaggle and can process videos to identify and mark potholes with bounding boxes.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── download_dataset.py      # Script to download the pothole dataset from Kaggle
@@ -28,125 +24,62 @@ This project uses the YOLO (You Only Look Once) framework to detect potholes in 
 └── predicted_sample_video.mp4 # Sample output video with predictions
 ```
 
-## 🛠️ Installation
+## Installation
 
-### Prerequisites
-
+**Prerequisites:**
 - Python 3.8+
-- CUDA-enabled GPU (recommended for training)
+- GPU recommended for training
 
-### Setup
+**Setup:**
 
-1. Clone this repository:
+1. Clone the repository:
 ```bash
 git clone https://github.com/BlazeWild/POTHOLE_YOLO.git
 cd POTHOLE_YOLO
 ```
 
-2. Install required packages:
+2. Install dependencies:
 ```bash
 pip install ultralytics kagglehub opencv-python
 ```
 
-## 📊 Dataset
+## Usage
 
-The project uses the [Potholes Detection YOLOv8 dataset](https://www.kaggle.com/datasets/anggadwisunarto/potholes-detection-yolov8) from Kaggle.
+### 1. Download Dataset
 
-### Download Dataset
-
-Run the download script to fetch the dataset:
 ```bash
 python download_dataset.py
 ```
 
-This will download and extract the dataset to the `potholes-dataset/` folder.
+Downloads the [Potholes Detection YOLOv8 dataset](https://www.kaggle.com/datasets/anggadwisunarto/potholes-detection-yolov8) from Kaggle.
 
-### Dataset Details
-- **Classes**: 1 (pothole)
-- **Training Images**: Located in `train/images/`
-- **Validation Images**: Located in `valid/images/`
-- **Annotations**: YOLO format (.txt files)
-
-## 🏋️ Training
-
-To train the model:
+### 2. Train the Model
 
 ```bash
 python train.py
 ```
 
-### Training Configuration
-- **Model**: YOLOv8n (nano) - lightweight and fast
-- **Epochs**: 100
-- **Dataset**: Custom pothole dataset
+Trains YOLOv8n model for 100 epochs. Model weights are saved in `runs/detect/train/weights/`.
 
-The trained model weights will be saved in `runs/detect/train/weights/`.
-
-## 🎯 Inference
-
-To run detection on a video:
+### 3. Run Inference
 
 ```bash
 python predict.py
 ```
 
-### Inference Details
-- **Input**: Sample video from `potholes-dataset/sample_video.mp4`
-- **Output**: `predicted_sample_video.mp4` with bounding boxes
-- **Threshold**: 0.5 (50% confidence)
-- **Model**: Best weights from training (`runs/detect/train/weights/last.pt`)
+Processes a video and outputs `predicted_sample_video.mp4` with detected potholes.
 
-## 📈 Results
+## Model Details
 
-The model outputs:
-- Bounding boxes around detected potholes
-- Class labels ("POTHOLE")
-- Confidence scores
-- Processed video with real-time annotations
+- **Architecture**: YOLOv8n (nano version)
+- **Classes**: 1 (pothole)
+- **Confidence Threshold**: 0.5
+- **Training Epochs**: 100
 
-## 🔧 Configuration
-
-### Model Configuration
-You can modify the model architecture by changing the YAML file in `train.py`:
-- `yolov8n.yaml` - Nano (fastest, smallest)
-- `yolov8s.yaml` - Small
-- `yolov8m.yaml` - Medium
-- `yolov8l.yaml` - Large
-- `yolov8x.yaml` - Extra Large
-
-### Training Parameters
-Adjust training parameters in `train.py`:
-- `epochs`: Number of training epochs
-- `imgsz`: Image size for training
-- `batch`: Batch size
-- `device`: GPU device ID
-
-## 📝 Requirements
+## Requirements
 
 ```
 ultralytics
 kagglehub
 opencv-python
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is open-source and available for educational and research purposes.
-
-## 🙏 Acknowledgments
-
-- [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) for the YOLO implementation
-- [Kaggle Dataset](https://www.kaggle.com/datasets/anggadwisunarto/potholes-detection-yolov8) for the pothole dataset
-- OpenCV for image processing capabilities
-
-## 📧 Contact
-
-For questions or suggestions, please open an issue on GitHub.
-
----
-
-**Made with ❤️ for safer roads**
