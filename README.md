@@ -1,4 +1,4 @@
-# Pothole Detection with YOLOv8n
+# Pothole Detection with YOLOv8n on Custom Dataset
 
 A pothole detection project using YOLOv8n (nano version) for object detection in images and videos.
 
