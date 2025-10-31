@@ -4,7 +4,10 @@ A pothole detection project using YOLOv8n (nano version) for object detection in
 
 ## Demo
 
-https://github.com/user-attachments/assets/predicted_sample_video.mp4
+<video width="640" controls>
+  <source src="predicted_sample_video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Project Overview
 
