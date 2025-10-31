@@ -4,10 +4,9 @@ A pothole detection project using YOLOv8n (nano version) for object detection in
 
 ## Demo
 
-<video width="640" controls>
-  <source src="predicted_sample_video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Pothole Detection Demo](https://img.youtube.com/vi/Nw79lFp2yAM/0.jpg)](https://youtu.be/Nw79lFp2yAM)
+
+*Click the image above to watch the demo video*
 
 ## Project Overview
 
