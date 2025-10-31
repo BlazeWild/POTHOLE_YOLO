@@ -1,0 +1,100 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+
+# Dataset (large files)
+potholes-dataset/train/images/
+potholes-dataset/train/labels/
+potholes-dataset/valid/images/
+potholes-dataset/valid/labels/
+potholes-dataset/*.mp4
+potholes-dataset/*.avi
+potholes-dataset/*.mov
+
+# Keep only the data.yaml file in potholes-dataset
+!potholes-dataset/data.yaml
+
+# Model weights and training outputs (except specific files)
+runs/
+!runs/.gitkeep
+
+# Pre-trained weights
+*.pt
+!yolo11n.pt
+
+# Output videos (keep predicted sample video)
+*.mp4
+!predicted_sample_video.mp4
+*.avi
+*.mov
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Cache
+.cache/
+*.cache
+
+# Lightning Studio specific
+.lightning_studio/
+.lightningignore
+
+# SSH and config
+.ssh/
+.config/
+.local/
+
+# Shell history
+.zsh_history
+.bash_history
+
+# Other
+.wget-hsts
+.sudo_as_admin_successful
