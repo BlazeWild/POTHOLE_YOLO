@@ -19,12 +19,12 @@ This project trains a YOLOv8n model to detect potholes in road videos. The model
 ├── train.py                  # Script to train the YOLO model
 ├── predict.py                # Script to run inference on videos
 ├── potholes-dataset/         # Dataset directory (downloaded via script)
-│   ├── data.yaml            # Dataset configuration file
-│   ├── train/               # Training images and labels
-│   └── valid/               # Validation images and labels
-├── runs/                     # Training outputs and model weights
-└── predicted_sample_video.mp4 # Sample output video with predictions
+│   └── data.yaml            # Dataset configuration file
+├── predicted_sample_video.mp4 # Sample output video with predictions
+└── yolo11n.pt               # Pre-trained YOLO model weights
 ```
+
+**Note:** The `potholes-dataset/train/`, `potholes-dataset/valid/`, and `runs/` folders are excluded from the repository due to their large size. They will be generated when you download the dataset and train the model.
 
 ## Installation
 
