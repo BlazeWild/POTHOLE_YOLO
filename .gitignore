@@ -60,6 +60,7 @@ potholes-dataset/*.mov
 # Pre-trained weights
 *.pt
 !yolo11n.pt
+!runs/detect/train/weights/*.pt
 
 # Output videos (keep predicted sample video)
 *.mp4
