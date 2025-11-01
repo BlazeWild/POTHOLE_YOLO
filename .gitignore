@@ -57,10 +57,6 @@ potholes-dataset/*.mov
 # Keep only the data.yaml file in potholes-dataset
 !potholes-dataset/data.yaml
 
-# Model weights and training outputs (except specific files)
-runs/
-!runs/.gitkeep
-
 # Pre-trained weights
 *.pt
 !yolo11n.pt
